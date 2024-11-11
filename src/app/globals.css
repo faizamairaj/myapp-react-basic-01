@@ -2,20 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.navbar {
+    display: flex;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightblue;
+    border-width: 15px;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.navbar:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+p:hover {
+    background-color: rgb(154, 226, 154);
+    color: crimson;
+    font-size: 22px;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(179, 197, 179);
+}
+
+img {
+    height: 350px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.contact-form form {
+    background-color: lightblue;
+    max-width: 50em;
+    margin: 1rem auto;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.contact-form span {
+    color: rgb(121, 121, 212);
+}
+
+.contact-form .input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form form .input input,
+.contact-form form textarea {
+    width: 50%;
+    font-size: 18px;
+    padding: 5px;
+    color: black;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.footer {
+    background-color: rgb(121, 121, 212);
+    color: black;
+    position: relative;
+}
+
+.footer .social {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.footer .social:hover {
+    color: rgb(237, 9, 9);
+    cursor: pointer;
+}
+
+.footer ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer ul li a {
+    transition: 0.3 ease;
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
+
+.footer .copyright {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Responsive styling for mobile screens (less than 768px wide) */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    img {
+        height: 250px;
+        margin-right: 0;
+    }
+
+    .contact-form form {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .contact-form form .input input,
+    .contact-form form textarea {
+        width: 100%;
+    }
+
+    .footer .social {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .footer ul li {
+        display: block;
+        font-size: 18px;
+        margin: 10px 0;
+    }
 }
